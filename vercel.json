@@ -1,12 +1,3 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "src/index.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "public/src/index.js" }
-  ]
+	"rewrites": [{ "source": "/graphql/(.*)", "destination": "/graphql" }]
 }

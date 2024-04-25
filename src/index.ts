@@ -31,6 +31,12 @@ async function bootstrap() {
   app.use(cookieParser());
   /** Create apollo server */
 
+  // app.use("/static", express.static(join(__dirname, "../public"), options));
+
+  app.get("/", (_req, res: express.Response) => {
+    res.send("Open Swagger UI at http://localhost:3000/static/index.html");
+  });
+
   const server = new ApolloServer({
     schema,
     //context: ctx => ctx,
